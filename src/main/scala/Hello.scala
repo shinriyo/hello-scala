@@ -9,9 +9,10 @@ object Hello {
 
     println("----")
     val res2 = TicketRepo.findAll
-    for (elem <- res2) {
-      println(elem)
-    }
+    res2.foreach(print)
+//    for (elem <- res2) {
+//      println(elem)
+//    }
     println(res2)
 
     println("----")
@@ -28,13 +29,15 @@ object Hello {
 
     println("----")
     val res7 = TicketRepo.findBugsByStatus("Open")
-    for (elem <- res7) {
-      println(elem)
-    }
+    res7.foreach(print)
+//    for (elem <- res7) {
+//      println(elem)
+//    }
     val res8 = TicketRepo.findBugsByStatus("Fixed")
-    for (elem <- res8) {
-      println(elem)
-    }
+    res8.foreach(print)
+//    for (elem <- res8) {
+//      println(elem)
+//    }
 
     println("----")
     val res9 = TicketRepo.fix(1)
@@ -42,8 +45,9 @@ object Hello {
     println("----")
 
     val res10 = TicketRepo.findAll
-    for (elem <- res10) {
-      println(elem)
-    }
+    res10.foreach(print)
+//    for (elem <- res10) {
+//      println(elem)
+//    }
   }
 }
